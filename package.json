@@ -1,0 +1,66 @@
+{
+  "name": "@betty-blocks/preview",
+  "version": "1.0.0",
+  "description": "Betty Blocks Component Set Preview",
+  "main": "index.js",
+  "author": "Bas Dirks <bas.dirks@bettyblocks.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bettyblocks/preview"
+  },
+  "contributors": [
+    "Robin Mulder <robin.mulder@bettyblocks.com>"
+  ],
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "yarn start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint './src/**/*.{ts,tsx}'"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.5.1",
+    "@material-ui/styles": "^4.5.0",
+    "@types/material-ui": "^0.21.7",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
+    "@types/react-jss": "^8.6.4",
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "graphql-tag": "^2.10.1",
+    "jss-plugin-vendor-prefixer": "^10.0.0",
+    "prettier": "^1.18.2",
+    "react": "^16.11.0",
+    "react-apollo": "^3.1.3",
+    "react-dom": "^16.11.0",
+    "react-jss": "^8.6.1",
+    "react-scripts": "^3.2.0",
+    "tsc-watch": "^4.0.0",
+    "typescript": "^3.6.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
