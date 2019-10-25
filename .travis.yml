@@ -7,14 +7,14 @@ jobs:
       script:
         - commitlint --from=master
       if: type = pull_request
-      name: "Commit lint"
+      name: 'Commit lint'
     - script:
         - yarn build
         - yarn lint
-      name: "Lint"
+      name: 'Lint'
     - stage: publish
       script: skip
-      name: "Release"
+      name: 'Release'
       if: branch = master AND type != pull_request
       deploy:
         provider: script
