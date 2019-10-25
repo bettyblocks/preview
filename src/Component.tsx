@@ -1,6 +1,4 @@
 import React, { useContext } from 'react';
-import { makeBuilder } from '@betty-blocks/component-helpers';
-import makeComponent from '@betty-blocks/component-generator';
 
 import { ComponentReference } from './types';
 import { ComponentContext } from './Preview';
@@ -23,21 +21,16 @@ const Component = ({
     return children;
   }
 
-  const [error, ReactComponent] = makeComponent({
-    jsx,
-    styles
-  });
-
-  console.log(error);
-
   return (
-    <ReactComponent key={`component_${name}`} options={{}}>
-      {descendants.map(
-        (component: ComponentReference): JSX.Element => (
-          <Component reference={component} />
-        )
-      )}
-    </ReactComponent>
+    <div>Component </div>
+    //   <ReactComponent key={`component_${name}`} options={{}}>
+    //     {descendants.map(
+    //       (component: ComponentReference): JSX.Element => (
+    //         <Component reference={component} />
+    //       )
+    //     )}
+    //   </ReactComponent>
+    // );
   );
 };
 
