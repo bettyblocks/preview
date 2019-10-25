@@ -1,6 +1,6 @@
 {
   "name": "@betty-blocks/preview",
-  "version": "1.0.0",
+  "version": "0.0.0-dev",
   "description": "Betty Blocks Component Set Preview",
   "main": "index.js",
   "author": "Bas Dirks <bas.dirks@bettyblocks.com>",
