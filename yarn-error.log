@@ -1,29 +1,29 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.19.1/libexec/bin/yarn.js add react-apollo graphql-tag @types/graphql-tag
+  /usr/local/bin/node /usr/local/bin/yarn add @babel/standalone 7.1.0
 
 PATH: 
-  /Users/bas/Downloads/google-cloud-sdk/bin:/Users/bas/.asdf/shims:/Users/bas/.asdf/bin:/Users/bas/bin:/usr/local/bin:/usr/bin:/bin:/Users/bas/.local/bin:/Applications/Racket v7.2/bin:/Users/bas/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS:/Users/bas/Downloads/google-cloud-sdk/bin:/Users/bas/bin:/Users/bas/.local/bin:/Applications/Racket v7.2/bin:/Users/bas/.cargo/bin:/usr/local/opt/fzf/bin
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/robin/.fzf/bin
 
 Yarn version: 
-  1.19.1
+  1.17.3
 
 Node version: 
-  12.11.1
+  12.10.0
 
 Platform: 
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fgraphql-tag: Not found
-      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.19.1/libexec/lib/cli.js:66926:18)
-      at Request.self.callback (/usr/local/Cellar/yarn/1.19.1/libexec/lib/cli.js:140564:22)
-      at Request.emit (events.js:210:5)
-      at Request.<anonymous> (/usr/local/Cellar/yarn/1.19.1/libexec/lib/cli.js:141536:10)
-      at Request.emit (events.js:210:5)
-      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.19.1/libexec/lib/cli.js:141458:12)
-      at Object.onceWrapper (events.js:299:28)
-      at IncomingMessage.emit (events.js:215:7)
-      at endReadableNT (_stream_readable.js:1183:12)
+  Error: https://registry.yarnpkg.com/7.1.0: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66830:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140464:22)
+      at Request.emit (events.js:209:13)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141436:10)
+      at Request.emit (events.js:209:13)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141358:12)
+      at Object.onceWrapper (events.js:298:28)
+      at IncomingMessage.emit (events.js:214:15)
+      at endReadableNT (_stream_readable.js:1178:12)
       at processTicksAndRejections (internal/process/task_queues.js:80:21)
 
 npm manifest: 
@@ -70,9 +70,11 @@ npm manifest:
       "eslint-plugin-prettier": "^3.1.0",
       "eslint-plugin-react": "^7.14.3",
       "eslint-plugin-react-hooks": "^2.2.0",
+      "graphql-tag": "^2.10.1",
       "jss-plugin-vendor-prefixer": "^10.0.0",
       "prettier": "^1.18.2",
       "react": "^16.11.0",
+      "react-apollo": "^3.1.3",
       "react-dom": "^16.11.0",
       "react-jss": "^8.6.1",
       "react-scripts": "^3.2.0",
@@ -9904,7 +9906,7 @@ Lockfile:
       minimist "^1.2.0"
       strip-json-comments "~2.0.1"
   
-  react-apollo@^3.1.1:
+  react-apollo@^3.1.1, react-apollo@^3.1.3:
     version "3.1.3"
     resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-3.1.3.tgz#5d8540b401bba36173b63e6c5e75fa561960c63e"
     integrity sha512-orCZNoAkgveaK5b75y7fw1MSqSHOU/Wuu9rRFOGmRQBSQVZjvV4DI+hj604rHmuN9+WDABxb5W48wTa0F/xNZQ==

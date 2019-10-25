@@ -1,8 +1,13 @@
 import React, { useContext } from 'react';
+import { makeBuilder } from '@betty-blocks/component-helpers';
+import makeComponent from '@betty-blocks/component-generator';
 
 import { ComponentReference } from './types';
 import { ComponentContext } from './Preview';
-import ASDFGH from './ASDFGH';
+
+interface LinkProps {
+  children?: JSX.Element | JSX.Element[];
+}
 
 const Component = ({
   reference: { descendants, name }
@@ -10,8 +15,18 @@ const Component = ({
   reference: ComponentReference;
 }): JSX.Element => {
   const { components } = useContext(ComponentContext);
-  const component = components[name];
-  const [error, ReactComponent] = ASDFGH(component);
+  const { jsx, styles } = components[name];
+
+  function Link({
+    children
+  }: LinkProps): JSX.Element | JSX.Element[] | undefined {
+    return children;
+  }
+
+  const [error, ReactComponent] = makeComponent({
+    jsx,
+    styles
+  });
 
   console.log(error);
 

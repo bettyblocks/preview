@@ -10,9 +10,8 @@ export default ({
 }): JSX.Element => (
   <>
     {structure.map(
-      (reference: ComponentReference): JSX.Element => {
-        const { name } = reference;
-        return <Component key={`component_${name}`} reference={reference} />;
+      (reference: ComponentReference, index: number): JSX.Element => {
+        return <Component key={index} reference={reference} />;
       }
     )}
   </>
