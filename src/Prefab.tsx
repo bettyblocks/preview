@@ -10,8 +10,8 @@ export default ({
 }): JSX.Element => (
   <>
     {structure.map(
-      (reference: ComponentReference, index: number): JSX.Element => {
-        return <Component key={index} reference={reference} />;
+      (reference: ComponentReference): JSX.Element => {
+        return <Component key={reference.name} reference={reference} />;
       }
     )}
   </>
