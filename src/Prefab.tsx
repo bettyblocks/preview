@@ -1,18 +1,14 @@
 import React from 'react';
 
 import { ComponentReference } from './types';
-import Component from './Component';
+import { Components } from './Component';
 
-export default ({
+function Prefab({
   structure
 }: {
   structure: ComponentReference[];
-}): JSX.Element => (
-  <>
-    {structure.map(
-      (reference: ComponentReference): JSX.Element => {
-        return <Component key={reference.name} reference={reference} />;
-      }
-    )}
-  </>
-);
+}): JSX.Element {
+  return <Components references={structure} />;
+}
+
+export default Prefab;

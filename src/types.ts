@@ -110,6 +110,8 @@ export interface Option {
   configuration?: unknown;
 }
 
+export type OptionMap = Record<string, unknown>;
+
 export type Orientation = 'VERTICAL' | 'HORIZONTAL';
 
 export interface Prefab {

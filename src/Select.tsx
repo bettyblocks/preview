@@ -1,31 +1,33 @@
 import React, { ChangeEvent } from 'react';
 import { Select, MenuItem, InputLabel, FormControl } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles, CSSProperties } from '@material-ui/styles';
 
-const useStyles = makeStyles((): object => ({
-  formControl: {
-    marginTop: '12px'
-  },
-  select: {
-    minWidth: 120
-  }
-}));
+const useStyles = makeStyles(
+  (): Record<string, CSSProperties> => ({
+    formControl: {
+      marginLeft: 32
+    },
+    select: {
+      backgroundColor: 'white',
+      borderRadius: 3,
+      minWidth: 120
+    }
+  })
+);
 
 export default ({
   onChange,
   names,
   selected
 }: {
-  onChange: (
-    event: ChangeEvent<{ name?: string | undefined; value: unknown }>
-  ) => void;
+  onChange: (event: ChangeEvent<{ name?: string; value: unknown }>) => void;
   names: string[];
   selected: string;
 }): JSX.Element => {
   const classes: Record<string, string> = useStyles();
 
   return (
-    <FormControl className={classes.formControl}>
+    <FormControl className={classes.formControl} variant="filled">
       <InputLabel htmlFor="select-prefab">Prefab</InputLabel>
       <Select
         autoWidth
