@@ -1,26 +1,14 @@
 import ErrorBoundary from 'react-error-boundary';
 import React, { createContext, useEffect, useState, Context } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { Card, Typography, CardContent } from '@material-ui/core';
+import { Container, Typography } from '@material-ui/core';
 import { createTheming } from 'react-jss';
-import { makeStyles, CSSProperties } from '@material-ui/styles';
 import { Theming } from 'theming';
 
 import { Prefab as PrefabT, ComponentContextProps, Component } from './types';
 import { fetchList, normalize } from './util';
 import Prefab from './Prefab';
 import theme from './theme';
-
-const useStyles = makeStyles(
-  (): Record<string, CSSProperties> => ({
-    card: {
-      marginTop: 24
-    },
-    cardContent: {
-      paddingBottom: '16px !important'
-    }
-  })
-);
 
 const ThemingContext = ('__APP_THEME__' as unknown) as Context<unknown>;
 const { ThemeProvider } = createTheming(ThemingContext) as Theming<object>;
@@ -42,7 +30,6 @@ function Fallback({ error }: { error?: Error }): JSX.Element {
 
 function Preview({ prefab }: { prefab: PrefabT | null }): JSX.Element {
   const [components, setComponents] = useState({} as Record<string, Component>);
-  const classes: Record<string, string> = useStyles();
 
   useEffect((): void => {
     fetchList<Component>('templates').then((list: Component[]): void => {
@@ -51,8 +38,8 @@ function Preview({ prefab }: { prefab: PrefabT | null }): JSX.Element {
   }, []);
 
   return (
-    <Card className={classes.card}>
-      <CardContent className={classes.cardContent}>
+    <>
+      <Container maxWidth="md">
         {prefab === null ? (
           <Typography variant="body1">
             Select a Prefab to get started.
@@ -66,8 +53,8 @@ function Preview({ prefab }: { prefab: PrefabT | null }): JSX.Element {
             </ErrorBoundary>
           </ComponentContext.Provider>
         )}
-      </CardContent>
-    </Card>
+      </Container>
+    </>
   );
 }
 

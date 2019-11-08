@@ -5,12 +5,12 @@ import { makeStyles, CSSProperties } from '@material-ui/styles';
 const useStyles = makeStyles(
   (): Record<string, CSSProperties> => ({
     formControl: {
-      marginLeft: 32
+      marginTop: '24px'
     },
     select: {
       backgroundColor: 'white',
       borderRadius: 3,
-      minWidth: 120
+      minWidth: 300
     }
   })
 );
@@ -31,6 +31,19 @@ export default ({
       <InputLabel htmlFor="select-prefab">Prefab</InputLabel>
       <Select
         autoWidth
+        MenuProps={{
+          anchorOrigin: {
+            horizontal: 'center',
+            vertical: 'top'
+          },
+          elevation: 0,
+          transformOrigin: {
+            horizontal: 'center',
+            vertical: 'top'
+          },
+          transitionDuration: 10,
+          variant: 'selectedMenu'
+        }}
         className={classes.select}
         inputProps={{ id: 'select-prefab' }}
         onChange={onChange}

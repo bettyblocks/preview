@@ -12,12 +12,12 @@ import {
 
 import { ComponentContext } from './Preview';
 
-const Link = (): void => {};
-const Query = (): void => {};
-
 const global = {
   Styling,
-  ...makeBuilder({ screenOffset: 0 }, { Link, Query })
+  ...makeBuilder(
+    { screenOffset: 0 },
+    { Link: (): void => {}, Query: (): void => {} }
+  )
 };
 
 const generate = ({ jsx, styles }: ComponentT): Function => {
