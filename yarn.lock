@@ -1044,10 +1044,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@betty-blocks/component-generator@^22.52.2":
-  version "22.52.2"
-  resolved "https://registry.yarnpkg.com/@betty-blocks/component-generator/-/component-generator-22.52.2.tgz#c9c94f88c6ddb9ed661f691a61c8350e719c6c19"
-  integrity sha512-CGg4JaRZiBsg0RHbyZ6cAlhmq/IwIrAx92cBvq9H3YFtfE0OqHnS35ear496j7f69UsDwmAnwa5GXvOOBiZt7Q==
+"@betty-blocks/component-generator@^22.60.0":
+  version "22.60.0"
+  resolved "https://registry.yarnpkg.com/@betty-blocks/component-generator/-/component-generator-22.60.0.tgz#0f87abed6b75c91d7ee01e81c1afe81b3a2ecd5e"
+  integrity sha512-6prtnT64Hv0VrqLK5uvtZPweQQ2P3pNJi94H3pFPeDc9MibMLLG7eH0nryRi6nMBwVVLTvr3GmRxfjG0yPdZDw==
   dependencies:
     "@babel/plugin-proposal-object-rest-spread" "^7.5.5"
     "@babel/plugin-transform-computed-properties" "^7.2.0"

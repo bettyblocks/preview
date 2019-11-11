@@ -1,6 +1,6 @@
 {
   "name": "preview",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "repository": "https://github.com/bettyblocks/preview.git",
   "author": "Bas Dirks <bas.dirks@bettyblocks.com>",
@@ -12,7 +12,7 @@
     "start": "react-scripts start"
   },
   "dependencies": {
-    "@betty-blocks/component-generator": "^22.52.2",
+    "@betty-blocks/component-generator": "^22.60.0",
     "@betty-blocks/component-helpers": "^22.36.0",
     "@betty-blocks/option-helpers": "^22.51.1",
     "@material-ui/core": "^4.5.2",
