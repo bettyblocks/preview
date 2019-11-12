@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/bettyblocks/preview/compare/v1.0.1...v1.0.2) (2019-11-12)
+
+
+### Bug Fixes
+
+* prefix package name ([54dc8f0](https://github.com/bettyblocks/preview/commit/54dc8f0ab5453974f3f17c77a69a4c3d5b7f0b47))
+
 ## [1.0.1](https://github.com/bettyblocks/preview/compare/v1.0.0...v1.0.1) (2019-11-12)
 
 
