@@ -1,25 +1,29 @@
 language: node_js
 node_js: 12.7.0
-
+before_install:
+- npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
 jobs:
   include:
-    - stage: quality
+  - stage: quality
+    script:
+    - commitlint --from=master
+    if: type = pull_request
+    name: Commit lint
+  - script:
+    - yarn build
+    - yarn lint
+    name: Lint
+  - stage: publish
+    script: skip
+    name: Release
+    if: branch = master AND type != pull_request
+    deploy:
+      provider: script
+      skip_cleanup: true
       script:
-        - commitlint --from=master
-      if: type = pull_request
-      name: 'Commit lint'
-    - script:
-        - yarn build
-        - yarn lint
-      name: 'Lint'
-    - stage: publish
-      script: skip
-      name: 'Release'
-      if: branch = master AND type != pull_request
-      deploy:
-        provider: script
-        skip_cleanup: true
-        script:
-          - yarn build && npx semantic-release
-        on:
-          branch: master
+      - yarn build && npx semantic-release
+      on:
+        branch: master
+env:
+  global:
+    secure: hpDgvPPf6xecndCdGBA+d21f38RWGw176JxFt5oDCWnmoH+97AAD+CeqBY6ElvT8T1sP1mP5Vd+CG9YklJrtDOiijuFqVbO3MeaiLUKoVNjPdC9iC0ynKLZeywzBYbYSnDHKzXqVeReSxNlxg6e6CGSWvgaNUuQwvqoNBrRlA/tnN8oWR/QaF9XiUAFM6w2QuRLtutwLv6JsLCDdQgt0SmZXbXhHDTnlx4kchzse4+kRzjEwrz5OZFxxAduFvDLATAtHXpce04Wzvrus1m/IpZ5wX3a/ICIS6vNc87FkG5AbpVlMk3DGLK4PP8N0b3r0wkg5b8dHwfqXZRaI5J7j8dw9m8J3nCTgd63XcmIa62Iuwh7+bdgarWFKOUr38s72ovIk8Aw0kgRsWqZYplUziowdZK9LSsOBgBJMyMOWlFRLD1sm7RoEKqQHvPvSbskjAMVq1zvNLJBvo6XSfl06+hKJDaEovs9I/cD3oQnoyc4GHzJ/oClwS6bQfA3Ja0CiYP6df7JLo4ia4n8OhVLs97ypO8llDJEjyXw3mpEmq57arOa2HEH9e2uXp/DVQRjyH0SUKqjMtersLk80A0REdnGC2eOYpqh0PAt/Knv5304ZKoUeeumZEBOgc/sTF9reIJnjM5WrHlPjb7//TWOLlzjZQsOheQL1LUmdYgO94pY=
