@@ -1,6 +1,6 @@
 {
   "name": "preview",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/bettyblocks/preview.git",
   "author": "Bas Dirks <bas.dirks@bettyblocks.com>",
