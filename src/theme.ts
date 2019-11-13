@@ -205,5 +205,17 @@ export default {
       medium: '0.125rem',
       large: '0.25rem'
     }
+  },
+  button: {
+    secondary: {
+      padding: { top: '4px', right: '8px', left: '8px', bottom: '4px' },
+      color: 'rgba(255, 255, 255, 1)',
+      backgroundColor: 'rgba(63, 81, 181, 1)'
+    },
+    primary: {
+      padding: { top: '4px', right: '8px', left: '8px', bottom: '4px' },
+      color: 'rgba(255, 255, 255, 1)',
+      backgroundColor: 'rgba(63, 81, 181, 1)'
+    }
   }
 };

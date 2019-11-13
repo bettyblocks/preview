@@ -1,5 +1,5 @@
 import ErrorBoundary from 'react-error-boundary';
-import React, { createContext, useEffect, useState, Context } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { Card, Typography, CardContent } from '@material-ui/core';
 import { createTheming } from 'react-jss';
@@ -10,6 +10,7 @@ import { Prefab as PrefabT, ComponentContextProps, Component } from './types';
 import { fetchList, normalize } from './util';
 import Prefab from './Prefab';
 import theme from './theme';
+import ThemeContext from './ThemeContext';
 
 const useStyles = makeStyles(
   (): Record<string, CSSProperties> => ({
@@ -22,8 +23,7 @@ const useStyles = makeStyles(
   })
 );
 
-const ThemingContext = ('__APP_THEME__' as unknown) as Context<unknown>;
-const { ThemeProvider } = createTheming(ThemingContext) as Theming<object>;
+const { ThemeProvider } = createTheming(ThemeContext) as Theming<object>;
 
 export const ComponentContext = createContext<ComponentContextProps>({
   components: {}
