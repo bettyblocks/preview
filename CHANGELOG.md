@@ -1,3 +1,13 @@
+## [1.0.3](https://github.com/bettyblocks/preview/compare/v1.0.2...v1.0.3) (2019-11-13)
+
+
+### Bug Fixes
+
+* bump ([cb48a23](https://github.com/bettyblocks/preview/commit/cb48a2362758a2934a1c086720f2456053c56c10))
+* deploy script ([cdb40b1](https://github.com/bettyblocks/preview/commit/cdb40b1b83e1bce095a1ff29faeb6c05689a2957))
+* move dependencies to devDependencies ([0f005d3](https://github.com/bettyblocks/preview/commit/0f005d3de1cb1a8015a649e0b1d9d313cc4a47d1))
+* setup husky and whitelisted build folder ([6e18383](https://github.com/bettyblocks/preview/commit/6e183833f3d7b05bef111491f3addd5491981a96))
+
 ## [1.0.2](https://github.com/bettyblocks/preview/compare/v1.0.1...v1.0.2) (2019-11-12)
 
 
