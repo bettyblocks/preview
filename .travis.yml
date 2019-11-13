@@ -6,12 +6,12 @@ jobs:
   include:
   - stage: quality
     script:
-    - commitlint --from=master
+      - commitlint --from=master
     if: type = pull_request
     name: Commit lint
   - script:
-    - yarn build
-    - yarn lint
+      - yarn build
+      - yarn lint
     name: Lint
   - stage: publish
     script: skip
@@ -21,8 +21,7 @@ jobs:
       provider: script
       skip_cleanup: true
       script:
-      - yarn build
-      - npx semantic-release
+        - yarn build && npx semantic-release
       on:
         branch: master
 env:
