@@ -9,33 +9,21 @@
     "build": "react-scripts build",
     "dev": "react-scripts dev",
     "lint": "eslint src/**/*",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "prettier:base": "prettier --parser typescript --single-quote",
+    "prettier:check": "yarn prettier:base --list-different \"src/**/*.{ts,tsx}\"",
+    "prettier:write": "yarn prettier:base --write \"src/**/*.{ts,tsx}\""
   },
   "files": [
     "build/"
   ],
   "dependencies": {
-    "@betty-blocks/component-generator": "^22.60.0",
-    "@betty-blocks/component-helpers": "^22.36.0",
-    "@betty-blocks/option-helpers": "^22.51.1",
     "@material-ui/core": "^4.5.2",
     "@material-ui/styles": "^4.5.2",
-    "@semantic-release/changelog": "^3.0.5",
-    "@semantic-release/commit-analyzer": "^6.3.3",
-    "@semantic-release/git": "^7.0.18",
-    "@semantic-release/github": "^5.5.5",
-    "@semantic-release/npm": "^5.3.4",
-    "@semantic-release/release-notes-generator": "^7.3.2",
-    "@types/jss": "^10.0.0",
-    "@types/react": "^16.9.11",
-    "@types/react-dom": "^16.9.3",
-    "@types/react-jss": "^10.0.0",
-    "@types/react-syntax-highlighter": "^11.0.1",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.5.0",
     "jss": "^10.0.0",
-    "prettier": "^1.18.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-error-boundary": "^1.2.5",
@@ -58,12 +46,31 @@
     ]
   },
   "devDependencies": {
+    "@betty-blocks/component-generator": "^22.60.0",
+    "@betty-blocks/component-helpers": "^22.36.0",
+    "@betty-blocks/option-helpers": "^22.51.1",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-angular": "^8.2.0",
+    "@commitlint/prompt-cli": "^8.2.0",
+    "@semantic-release/changelog": "^3.0.5",
+    "@semantic-release/commit-analyzer": "^6.3.3",
+    "@semantic-release/git": "^7.0.18",
+    "@semantic-release/github": "^5.5.5",
+    "@semantic-release/npm": "^5.3.4",
+    "@semantic-release/release-notes-generator": "^7.3.2",
+    "@types/jss": "^10.0.0",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.3",
+    "@types/react-jss": "^10.0.0",
+    "@types/react-syntax-highlighter": "^11.0.1",
     "eslint-plugin-prettier": "^3.1.1",
-    "husky": "^3.0.9"
+    "husky": "^3.0.9",
+    "prettier": "^1.19.1"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn build"
+      "pre-commit": "prettier --parser typescript --single-quote --write \"src/**/*.{ts,tsx}\"",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }

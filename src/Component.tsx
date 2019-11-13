@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { useContext } from 'react';
 import { makeBuilder } from '@betty-blocks/component-helpers';
 import makeComponent from '@betty-blocks/component-generator';
