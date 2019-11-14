@@ -12,6 +12,7 @@ import {
 } from './types';
 
 import { ComponentContext } from './Preview';
+import ThemeContext from './ThemeContext';
 
 const Link = (): void => {};
 const Query = (): void => {};
@@ -22,7 +23,11 @@ const global = {
 };
 
 const generate = ({ jsx, styles }: ComponentT): Function => {
-  const [error, ReactComponent] = makeComponent({ global, jsx, styles }, React);
+  const [error, ReactComponent] = makeComponent(
+    { global, jsx, styles },
+    React,
+    ThemeContext
+  );
 
   if (error) {
     throw error;
