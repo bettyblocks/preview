@@ -1,3 +1,19 @@
+## [1.0.4](https://github.com/bettyblocks/preview/compare/v1.0.3...v1.0.4) (2019-11-14)
+
+
+### Bug Fixes
+
+* ci ([47fd959](https://github.com/bettyblocks/preview/commit/47fd959e0b6b9b5ece9db81c3ce6b96de10323b3))
+* ci ([eaaf030](https://github.com/bettyblocks/preview/commit/eaaf030b97321f52d489cb79b46820b70b606aba))
+* ci ([88c2555](https://github.com/bettyblocks/preview/commit/88c25552e6f0f33b7cc2abbaef802b41874937fa))
+* ci env ([3ea722f](https://github.com/bettyblocks/preview/commit/3ea722f58198787a98a3e68f0a3b964402816161))
+* downgrade typescript to 3.6.4 ([84435f5](https://github.com/bettyblocks/preview/commit/84435f5f59160792819df25aea310c614c908a40))
+* issue with build scripts ([489d911](https://github.com/bettyblocks/preview/commit/489d911b42de56f9d315406735e6749adb76df04))
+* move CI env var outside of global ([49113f0](https://github.com/bettyblocks/preview/commit/49113f05813db4df08dc37107324e43c400751ab))
+* set CI variable to false ([2f512fc](https://github.com/bettyblocks/preview/commit/2f512fc7438333d15c30b8fce84bf2d70293035e))
+* use the newest version of the component generator ([5cc4f81](https://github.com/bettyblocks/preview/commit/5cc4f817a607351ff29b04c1a8499300be80a3aa))
+* yml ([8e78293](https://github.com/bettyblocks/preview/commit/8e782932ae3b816653d6df50718638568c872c4b))
+
 ## [1.0.3](https://github.com/bettyblocks/preview/compare/v1.0.2...v1.0.3) (2019-11-13)
 
 
