@@ -26,7 +26,7 @@ const useStyles = makeStyles(
 const { ThemeProvider } = createTheming(ThemeContext) as Theming<object>;
 
 export const ComponentContext = createContext<ComponentContextProps>({
-  components: {}
+  components: null
 });
 
 function Fallback({ error }: { error?: Error }): JSX.Element {
@@ -40,8 +40,10 @@ function Fallback({ error }: { error?: Error }): JSX.Element {
   );
 }
 
-function Preview({ prefab }: { prefab: PrefabT | null }): JSX.Element {
-  const [components, setComponents] = useState({} as Record<string, Component>);
+function Preview({ prefab }: { prefab: PrefabT | undefined }): JSX.Element {
+  const [components, setComponents] = useState(
+    null as Record<string, Component> | null
+  );
   const classes: Record<string, string> = useStyles();
 
   useEffect((): void => {
@@ -53,7 +55,7 @@ function Preview({ prefab }: { prefab: PrefabT | null }): JSX.Element {
   return (
     <Card className={classes.card}>
       <CardContent className={classes.cardContent}>
-        {prefab === null ? (
+        {prefab === undefined ? (
           <Typography variant="body1">
             Select a Prefab to get started.
           </Typography>

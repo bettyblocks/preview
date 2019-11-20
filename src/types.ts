@@ -10,7 +10,7 @@ export interface Component {
 }
 
 export interface ComponentContextProps {
-  components: Record<string, Component>;
+  components: Record<string, Component> | null;
 }
 
 export interface ComponentReference {
