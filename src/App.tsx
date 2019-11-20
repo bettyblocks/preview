@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, ChangeEvent } from 'react';
 import { Container, AppBar, Toolbar } from '@material-ui/core';
 import { makeStyles, CSSProperties } from '@material-ui/styles';
+import { useHistory } from 'react-router-dom';
 
 import Select from './Select';
 import { Prefab } from './types';
@@ -22,7 +23,8 @@ const useStyles = makeStyles(
 function App(): JSX.Element {
   const [prefabs, setPrefabs] = useState({} as Record<string, Prefab>);
   const [names, setNames] = useState([] as string[]);
-  const [selected, select] = useState('');
+  const history = useHistory();
+  const currentPath = history.location.pathname.replace('/', '');
   const classes: Record<string, string> = useStyles();
 
   useEffect((): void => {
@@ -42,14 +44,18 @@ function App(): JSX.Element {
             alt="Betty Blocks logo"
           />
           <Select
-            onChange={({ target: { value } }): void => select(value as string)}
+            onChange={({
+              target: { value }
+            }: ChangeEvent<{ value: unknown }>): void =>
+              history.push(value as string)
+            }
             names={names}
-            selected={selected}
+            selected={currentPath}
           />
         </Toolbar>
       </AppBar>
       <Container maxWidth="md">
-        <Preview prefab={prefabs[selected] || null} />
+        <Preview prefab={prefabs[currentPath] || null} />
       </Container>
     </>
   );
