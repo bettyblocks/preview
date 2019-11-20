@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/bettyblocks/preview/compare/v1.1.0...v1.1.1) (2019-11-20)
+
+
+### Bug Fixes
+
+* add prefix routes ([dc4832a](https://github.com/bettyblocks/preview/commit/dc4832a6221f415306baea7096637f47efc90d85))
+
 # [1.1.0](https://github.com/bettyblocks/preview/compare/v1.0.4...v1.1.0) (2019-11-20)
 
 
