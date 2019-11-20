@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, ChangeEvent } from 'react';
 import { Container, AppBar, Toolbar } from '@material-ui/core';
 import { makeStyles, CSSProperties } from '@material-ui/styles';
 import { useHistory } from 'react-router-dom';
@@ -44,7 +44,11 @@ function App(): JSX.Element {
             alt="Betty Blocks logo"
           />
           <Select
-            onChange={({ target: { value } }): void => history.push(`${value}`)}
+            onChange={({
+              target: { value }
+            }: ChangeEvent<{ value: unknown }>): void =>
+              history.push(value as string)
+            }
             names={names}
             selected={currentPath}
           />
