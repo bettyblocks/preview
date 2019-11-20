@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/bettyblocks/preview/compare/v1.0.4...v1.1.0) (2019-11-20)
+
+
+### Bug Fixes
+
+* correct type for changeEvent ([4582e21](https://github.com/bettyblocks/preview/commit/4582e21c292cdaa6939b4ec2d7436f1f51c85aa7))
+
+
+### Features
+
+* added router ([f336974](https://github.com/bettyblocks/preview/commit/f33697497f54d301bf3ef62d5b6e1935860bdae5))
+
 ## [1.0.4](https://github.com/bettyblocks/preview/compare/v1.0.3...v1.0.4) (2019-11-14)
 
 
