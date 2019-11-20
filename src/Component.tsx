@@ -70,8 +70,11 @@ export function Component({
 }: {
   key: string;
   reference: ComponentReference;
-}): JSX.Element {
+}): JSX.Element | null {
   const { components } = useContext(ComponentContext);
+  if (components === null) {
+    return null;
+  }
   const component = components[name];
   const ReactComponent = generate(component);
   const optionMap = mockOptions(options);

@@ -24,8 +24,9 @@ function App(): JSX.Element {
   const [prefabs, setPrefabs] = useState({} as Record<string, Prefab>);
   const [names, setNames] = useState([] as string[]);
   const history = useHistory();
-  const currentPath = history.location.pathname.replace('/', '');
+  const currentPath = history.location.hash.replace('#/', '');
   const classes: Record<string, string> = useStyles();
+  const selectedPrefab = prefabs[currentPath];
 
   useEffect((): void => {
     fetchList<Prefab>('prefabs').then((list: Prefab[]): void => {
@@ -47,7 +48,7 @@ function App(): JSX.Element {
             onChange={({
               target: { value }
             }: ChangeEvent<{ value: unknown }>): void =>
-              history.push(value as string)
+              history.push(`/#/${value}`)
             }
             names={names}
             selected={currentPath}
@@ -55,7 +56,7 @@ function App(): JSX.Element {
         </Toolbar>
       </AppBar>
       <Container maxWidth="md">
-        <Preview prefab={prefabs[currentPath] || null} />
+        <Preview prefab={selectedPrefab || undefined} />
       </Container>
     </>
   );
