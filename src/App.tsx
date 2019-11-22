@@ -24,7 +24,7 @@ function App(): JSX.Element {
   const [prefabs, setPrefabs] = useState({} as Record<string, Prefab>);
   const [names, setNames] = useState([] as string[]);
   const history = useHistory();
-  const currentPath = history.location.hash.replace('#/', '');
+  const currentPath = decodeURI(history.location.hash.replace('#/', ''));
   const classes: Record<string, string> = useStyles();
   const selectedPrefab = prefabs[currentPath];
 
@@ -47,9 +47,9 @@ function App(): JSX.Element {
           <Select
             onChange={({
               target: { value }
-            }: ChangeEvent<{ value: unknown }>): void =>
-              history.push(`/#/${value}`)
-            }
+            }: ChangeEvent<{ value: unknown }>): void => {
+              history.push(`/#/${value}`);
+            }}
             names={names}
             selected={currentPath}
           />
