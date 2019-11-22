@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/bettyblocks/preview/compare/v1.1.1...v1.1.2) (2019-11-22)
+
+
+### Bug Fixes
+
+* decode hash ([867f724](https://github.com/bettyblocks/preview/commit/867f7247c3b90b1c57b1854abe7597e38b1cf1fb))
+
 ## [1.1.1](https://github.com/bettyblocks/preview/compare/v1.1.0...v1.1.1) (2019-11-20)
 
 
