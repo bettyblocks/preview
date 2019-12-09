@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/bettyblocks/preview/compare/v1.1.2...v1.1.3) (2019-12-09)
+
+
+### Bug Fixes
+
+* react version bump ([173f11f](https://github.com/bettyblocks/preview/commit/173f11f7c1a9dcc05b5e1eb0fdfce9e1ea8a6aa9))
+
 ## [1.1.2](https://github.com/bettyblocks/preview/compare/v1.1.1...v1.1.2) (2019-11-22)
 
 
